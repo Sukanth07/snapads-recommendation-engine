@@ -13,6 +13,10 @@ user_preferences = None
 def hash_encode(value):
     return int(hashlib.md5(value.encode()).hexdigest(), 16) % 10**8  # Limiting the hash to 8 digits for simplicity
 
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
 # Endpoint to receive JSON data from frontend
 @app.route('/recommend_boards', methods=['POST'])
 def recommend_boards():
