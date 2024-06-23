@@ -18,7 +18,7 @@ def hello_world():
     return 'Hello World!'
 
 @app.route('/test')
-def hello_world():
+def hello_world_test():
     return 'Hello World! Test'
 
 # Endpoint to receive JSON data from frontend
