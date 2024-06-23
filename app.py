@@ -17,6 +17,10 @@ def hash_encode(value):
 def hello_world():
     return 'Hello World!'
 
+@app.route('/test')
+def hello_world():
+    return 'Hello World! Test'
+
 # Endpoint to receive JSON data from frontend
 @app.route('/recommend_boards', methods=['POST'])
 def recommend_boards():
