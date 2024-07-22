@@ -17,10 +17,6 @@ def hash_encode(value):
 def hello_world():
     return 'Hello World!'
 
-@app.route('/test')
-def hello_world_test():
-    return 'Hello World! Test'
-
 # Endpoint to receive JSON data from frontend
 @app.route('/recommend_boards', methods=['POST'])
 def recommend_boards():
@@ -48,8 +44,6 @@ def recommend_boards():
         user_pref_encoded = [
             hash_encode(user_preferences['state']),
             hash_encode(user_preferences['city']),
-            user_preferences['banner_height'],
-            user_preferences['banner_width'],
             user_preferences['price'],
             user_preferences['light_type']
         ]
